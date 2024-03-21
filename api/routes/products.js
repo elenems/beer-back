@@ -70,17 +70,17 @@ router.put(
   },
 );
 
-router.post('/star/:id', async (req, res) => {
-  try {
-    const { value } = req.query;
-    console.log(typeof value, ' val')
-    const isStar = +value
-    const message = await toggleStarProductById(req.params.id, isStar)
-    return res.status(200).json({ message });
-  } catch(e) {
-    return res.status(400).json({ message: e, error: e });
-  }
-});
+// router.post('/star/:id', async (req, res) => {
+//   try {
+//     const { value } = req.query;
+//     console.log(typeof value, ' val')
+//     const isStar = +value
+//     const message = await toggleStarProductById(req.params.id, isStar)
+//     return res.status(200).json({ message });
+//   } catch(e) {
+//     return res.status(400).json({ message: e, error: e });
+//   }
+// });
 
 
 
